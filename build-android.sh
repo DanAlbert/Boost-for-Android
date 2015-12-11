@@ -262,6 +262,11 @@ case "$NDK_RN" in
 		CXXPATH=$AndroidNDKRoot/toolchains/${TOOLCHAIN}/prebuilt/${PlatformOS}-x86_64/bin/arm-linux-androideabi-g++
 		TOOLSET=gcc-androidR8e
 		;;
+	"11")
+		TOOLCHAIN=${TOOLCHAIN:-arm-linux-androideabi-4.9}
+		CXXPATH=$AndroidNDKRoot/toolchains/${TOOLCHAIN}/bin/arm-linux-androideabi-g++
+		TOOLSET=gcc-androidR11
+		;;
 	*)
 		echo "Undefined or not supported Android NDK version!"
 		exit 1
